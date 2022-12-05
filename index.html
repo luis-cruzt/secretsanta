@@ -396,7 +396,9 @@
           }
 
           try {
-              return success( santa.generate() );
+            var data = santa.generate();
+            console.table(data);
+              return success(data);
           } catch ( err ) {
             console.error(err.stack)
               return error( err.message );
